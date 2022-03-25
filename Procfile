@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker API_sms_spam:app
+web: uvicorn API_sms_spam:app --host=0.0.0.0 --port=${PORT:-5000}
